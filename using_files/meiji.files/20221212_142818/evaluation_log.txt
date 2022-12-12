@@ -1,0 +1,12 @@
+2022-12-12 14:28:44,564 Evaluation process is started.
+python "D:\spresense\neural_network_console\libs\Python\Lib\site-packages\nnabla\utils\cli\cli.py" forward
+	-c "D:\meiji\meiji.files\20221212_142818\results.nnp"
+	-d "D:\meiji\output\hiragana_test.csv"
+	-o "D:\meiji\meiji.files\20221212_142818"
+	--replace_path
+2022-12-12 14:28:46,906 [nnabla]: Using context "Context(backend=['cudnn:float', 'cuda:float', 'cpu:float'], array_class='CudaCachedArray', device_id='0')"
+2022-12-12 14:28:47,832 [nnabla]: data 64 / 160
+2022-12-12 14:28:47,839 [nnabla]: data 128 / 160
+2022-12-12 14:28:47,859 [nnabla]: data 160 / 160
+2022-12-12 14:28:47,874 [nnabla]: Forward Completed.
+NNabla command line interface (Version:1.19.0.dev1, Build:210412014546, Callback:NNabla SSH callback module.)
