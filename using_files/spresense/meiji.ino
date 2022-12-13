@@ -21,6 +21,7 @@ SDClass SD;
 DNNRT dnnrt;
 
 DNNVariable input(DNN_WIDTH*DNN_HEIGHT);
+// クラスを増やしたいときは下の1行と行目を変更してください（例）const char label[3] = {'0','1','2'};
 const char label[8] = {'0','1','2','3','4','5','6','7'};
 
 void CamCB(CamImage img) {
@@ -56,41 +57,49 @@ void CamCB(CamImage img) {
   int index = output.maxIndex();
 
   // 推論結果の表示
-  //　音の長さを調節したいときは下のsound_timeの数字を調節してください
-  int sound_time = 500;
+  int sound_time = 50;
   String gStrResult;
   if (output[index] > 0.7) {
+    //ここも行目と同様に数字を変更してください（例）if (index < 3) {
     if (index < 7) {
       gStrResult = String(label[index]) + String(":") + String(output[index]);
         switch(index){
+        // ド
         case 0:
           theAudio->setBeep(1,-40,262);
           usleep(sound_time * 1000);
           break;
+        // レ
         case 1:
           theAudio->setBeep(1,-40,294);
           usleep(sound_time * 1000);
           break;
+        // ミ
         case 2:
           theAudio->setBeep(1,-40,330);
           usleep(sound_time * 1000);
           break;
+        // ファ
         case 3:
           theAudio->setBeep(1,-40,349);
           usleep(sound_time * 1000);
           break;
+        // ソ
         case 4:
           theAudio->setBeep(1,-40,392);
           usleep(sound_time * 1000);
           break;
+        // ラ
         case 5:
           theAudio->setBeep(1,-40,440);
           usleep(sound_time * 1000);
           break;
+        // シ
         case 6:
           theAudio->setBeep(1,-40,494);
           usleep(sound_time * 1000);
           break;
+        // ド
         case 7:
           theAudio->setBeep(1,-40,523);
           usleep(sound_time * 1000);
