@@ -1,3 +1,5 @@
+SPRESENSE + Neural Network Console を用いた画像認識楽器
+
 基本 using_file以下のファイルを使って下さい
 
 data : データとして用いる画像セット
